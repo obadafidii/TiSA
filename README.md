@@ -1,6 +1,6 @@
 # TiSA
 
-TiSA is an educational tensor instruction-set architecture, compiler toolchain, and accelerator simulator built in C++.
+TiSA is a tensor instruction-set architecture, compiler toolchain, and accelerator simulator built in C++.
 
 The project is intentionally split into two layers:
 
@@ -8,6 +8,9 @@ The project is intentionally split into two layers:
 2. **MLIR integration scaffold:** an out-of-tree `tisa` dialect and `tisa-opt` driver, ready for lowering/serialization passes.
 
 The first layer is fully runnable and tested without LLVM/MLIR installed. The MLIR subtree requires an MLIR development build/install and is kept optional.
+
+## Motivation
+I was reading through the conversation of an ML Compiler Engineer and I saw this "like creating a simple tensor based instruction set and runtime, then building an MLIR based compiler targeting your instruction set." and this is what sparked me to ask gpt what it meant. It broke it down for me and gave me this README.md and other codes. I removed the codes but kept the architecture files for future reference. As of writing this I am still learning llvm, I don't know when I will pick this project up.
 
 ## 1. Build the working runtime/compiler
 
