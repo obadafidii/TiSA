@@ -1,0 +1,13 @@
+# Two 2x2 matrices. The VM stores f32 tensors in virtual tensor registers.
+.const A [2,2] = 1, 2, 3, 4
+.const B [2,2] = 5, 6, 7, 8
+.const BIAS [2,2] = -20, 0, 0, -60
+
+const r0, A
+const r1, B
+matmul r2, r0, r1
+const r3, BIAS
+add r4, r2, r3
+relu r5, r4
+print r5
+halt
